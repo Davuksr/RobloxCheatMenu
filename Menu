@@ -19,6 +19,7 @@ OpenCloseGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 OpenCloseGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = OpenCloseGUI
+Frame.Active = true
 Frame.BackgroundColor3 = Color3.fromRGB(61, 61, 48)
 Frame.Position = UDim2.new(-0.000680017925, 0, -0.000436181756, 0)
 Frame.Size = UDim2.new(0, 531, 0, 351)
@@ -97,7 +98,7 @@ Open.TextWrapped = true
 
 -- Scripts:
 
-local function PBSYQ_fake_script() -- Close.LocalScript 
+local function LYEJR_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local Frame = script.Parent.Parent
@@ -106,8 +107,8 @@ local function PBSYQ_fake_script() -- Close.LocalScript
 		Frame.Visible = false
 	end)
 end
-coroutine.wrap(PBSYQ_fake_script)()
-local function JUPTYB_fake_script() -- TextButton.Script 
+coroutine.wrap(LYEJR_fake_script)()
+local function OLFZLI_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	--This is a simple roblox game crasher made by casanova
@@ -159,14 +160,14 @@ local function JUPTYB_fake_script() -- TextButton.Script
 		bomb(250, 2) --// change values if client crashes.
 	end
 end
-coroutine.wrap(JUPTYB_fake_script)()
-local function KJUORIV_fake_script() -- TextButton_2.Script 
+coroutine.wrap(OLFZLI_fake_script)()
+local function LUIHOOV_fake_script() -- TextButton_2.Script 
 	local script = Instance.new('Script', TextButton_2)
 
 	loadstring(game:HttpGet('https://github.com/DigitalityScripts/roblox-scripts/raw/main/loop%20fling%20all'))()
 end
-coroutine.wrap(KJUORIV_fake_script)()
-local function YQDVGY_fake_script() -- TextButton_3.Script 
+coroutine.wrap(LUIHOOV_fake_script)()
+local function HGQN_fake_script() -- TextButton_3.Script 
 	local script = Instance.new('Script', TextButton_3)
 
 	local lp = game:FindService("Players").LocalPlayer
@@ -297,8 +298,8 @@ local function YQDVGY_fake_script() -- TextButton_3.Script
 	--//fsddfsdf
 	notif("Loaded successfully! Created by scuba#0001", 5)
 end
-coroutine.wrap(YQDVGY_fake_script)()
-local function AWGJ_fake_script() -- Open.LocalScript 
+coroutine.wrap(HGQN_fake_script)()
+local function YNMIO_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	local Frame = script.Parent.Parent.Frame
@@ -307,4 +308,4 @@ local function AWGJ_fake_script() -- Open.LocalScript
 		Frame.Visible = true
 	end)
 end
-coroutine.wrap(AWGJ_fake_script)()
+coroutine.wrap(YNMIO_fake_script)()
